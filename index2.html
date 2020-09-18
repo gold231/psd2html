@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    
+    <style>
+        .txt1{
+            /* font-size: 55px; */
+            font-weight: bold;  
+            font-family: 'Work Sans';
+            line-height: 1.1;
+        }
+        .txt2{
+            /* font-size: 16px; */
+            font-family: 'Work Sans regular';
+        }
+        #footer_content{
+            font-family: 'Work Sans regular';
+            color: white;
+        }     
+    </style>
+</head>
+
+<body>
+    <main style="margin: 0; width: 95%;">
+        <div style="padding: 0; margin:0; position: absolute;">            
+            <div class="col-lg-12" style="padding: 0; margin: 0;">
+                <div  class="col-lg-6" style="padding: 0; margin: 0;">                        
+                    <img id="img1" class="img-responsive" src="back2.png" alt="">
+                </div>
+                <div  class="col-lg-6" style="padding: 0; margin: 0;">
+                    <img id="img2" class="img-responsive" src="back1.png" alt="">
+                </div>
+                <footer id="footer_content" class="row" style="background-color: black; clear: both; padding: 1%">
+                    <div class="col-sm-4" style="text-align: center;">
+                        <i class='fas fa-map-marker-alt' style='color:white;'></i> 128 Prinsep St, #01-01, Singapore 188655
+                    </div>
+                    <div class="col-sm-4"></div>
+                    <div class="col-sm-4" style="text-align: center;">
+                        <i class="fa fa-envelope" style="color: white;"></i> contact@atapfund.com
+                    </div>                    
+                </footer>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6" style="margin-top:2%;margin-left:3%;">
+                <div class="row">
+                    <div class="col-sm-4">                
+                        <img class="img-responsive" src="logo.png" alt="">
+                    </div>
+                    <div class="col-sm-4"></div>
+                    <div class="col-sm-4"></div>
+                </div>
+                <div class="txt1" style="margin-top: 14%; clear: both;">
+                    <p id="banner_title">DATA-DRIVEN CROSS-BORDER CONSUMER BRANDS POWER HOUSE</p>
+                </div>
+                <div class="txt2" id="banner_text">
+                    <p>We are neither VC, not private equity. Although we're closer to private equity, but we take more risk. We are techy, but definitely not deep tech.</p>
+                    <p>We believe that traditional VC funds are too speculative and bringing a little or no value, running for x50 return and unicorns. We're not looking to buy and do quick flip.</p>                    
+                </div>        
+            </div>        
+        </div>
+    </main>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>   
+    <script>
+        window.onresize = function(){
+            var current_width = window.innerWidth;
+            var s1 = Math.trunc(75 * current_width / 1920) > 40 ? Math.trunc(75 * current_width / 1920) : 40;
+            document.getElementById("banner_title").style.fontSize = s1 + "px";
+            var s2 = Math.trunc(20 * current_width / 1920) > 16 ? Math.trunc(20 * current_width / 1920) : 16;
+            document.getElementById("banner_text").style.fontSize = s2 + "px";
+            var s3 = Math.trunc(17 * current_width / 1920) > 14 ? Math.trunc(17 * current_width / 1920) : 14;
+            document.getElementById("footer_content").style.fontSize = s3 + "px";
+            var current_height = window.innerHeight;
+            var dif_height1 = s3 + 30; 
+            var dif_height2 = 2 * s3 + 6;
+            if (current_width > current_height){
+                document.getElementById("img1").style.height = current_height - dif_height1 + "px";
+                document.getElementById("img1").style.width = Math.trunc(current_width / 2) -10 + "px";
+            }else{
+                document.getElementById("img1").style.height = Math.trunc(current_height / 2) - dif_height2 + "px";
+                document.getElementById("img1").style.width = current_width + "px";
+            }   
+            if (current_width > current_height){
+                document.getElementById("img2").style.height = current_height - dif_height1 + "px";
+                document.getElementById("img2").style.width = Math.trunc(current_width / 2) - 10 + "px";
+            }else{
+                document.getElementById("img2").style.height = Math.trunc(current_height / 2) - dif_height2 + "px";
+                document.getElementById("img2").style.width = current_width + "px";
+            }
+        }
+        window.onload = function(){
+            var current_width = window.innerWidth;
+            var s1 = Math.trunc(75 * current_width / 1920) > 40 ? Math.trunc(75 * current_width / 1920) : 40;
+            document.getElementById("banner_title").style.fontSize = s1 + "px";
+            var s2 = Math.trunc(20 * current_width / 1920) > 16 ? Math.trunc(20 * current_width / 1920) : 16;
+            document.getElementById("banner_text").style.fontSize = s2 + "px";
+            var s3 = Math.trunc(17 * current_width / 1920) > 14 ? Math.trunc(17 * current_width / 1920) : 14;
+            document.getElementById("footer_content").style.fontSize = s3 + "px";
+            var current_height = window.innerHeight;
+            var dif_height1 = s3 + 30; 
+            var dif_height2 = 2 * s3 + 6;
+            if (current_width > current_height){
+                document.getElementById("img1").style.height = current_height - dif_height1 + "px";
+                document.getElementById("img1").style.width = Math.trunc(current_width / 2) -10 + "px";
+            }else{
+                document.getElementById("img1").style.height = Math.trunc(current_height / 2) - dif_height2 + "px";
+                document.getElementById("img1").style.width = current_width + "px";
+            }
+            if (current_width > current_height){
+                document.getElementById("img2").style.height = current_height - dif_height1 + "px";
+                document.getElementById("img2").style.width = Math.trunc(current_width / 2) -10 + "px";
+            }else{
+                document.getElementById("img2").style.height = Math.trunc(current_height / 2) - dif_height2 + "px";
+                document.getElementById("img2").style.width = current_width + "px";
+            }
+        }
+    </script>
+</body>
+</html>
